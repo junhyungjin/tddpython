@@ -34,7 +34,7 @@ class NewVisitorTest(unittest.TestCase):
 
         table = self.browser.find_element_by_id('id_list_table')
         rows = table.find_element_by_tag_name('tr')
-        self.assertTrue(any(row.text == '1: 공작깃털 사기' for row in rows),)
+        self.assertTrue(any(row.text == '1: 공작깃털 사기' for row in rows), "신규 작업이 테이블에 표시되지 않는다")
 
 
         # 추가 아이템을 살 수있는 여분의 텍스트 상자가 존재한다
